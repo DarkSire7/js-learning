@@ -1,0 +1,45 @@
+h1 {
+  text-align: center;
+}
+
+#count {
+  font-size: xx-large;
+  text-align: center;
+  font-weight: 900;
+}
+
+#cblock {
+  margin-top: 25vh;
+  margin-left: 70px;
+  margin-right: 70px;
+  border: 4px solid black;
+  border-radius: 10px;
+  background-color: rgb(124, 183, 247);
+}
+
+body {
+  background-color: rgb(82, 163, 250);
+}
+
+
+.button {
+  background-color: rgb(134, 193, 255);
+  width: 55px;
+
+  border: 3px solid black;
+  border-radius: 7px;
+  margin-bottom: 7px;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  gap: 15vh;
+
+  flex-wrap: wrap;
+}
+
+#record {
+  margin-left: 2vh;
+  font-size: larger;
+}

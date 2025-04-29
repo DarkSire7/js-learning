@@ -1,0 +1,60 @@
+body {
+  background: rgba(186, 212, 255, 0.5);
+}
+
+.post {
+  background: rgb(255, 247, 220);
+  border: 3px solid rgb(238, 199, 70);
+}
+
+#main {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-gap: 0px;
+  width: 100%;
+}
+
+#image-1 {
+  float: right;
+  margin: 15px;
+  height: 250px;
+}
+
+.sidebar {
+  background: rgb(255, 227, 191);
+}
+
+.image-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+img {
+  width: 200px;
+  height: 300px;
+  transition: 0.5s all;
+}
+
+img:hover {
+  width: 250px;
+  height: 400px;
+}
+
+a:hover {
+  color: plum;
+}
+
+@keyframes expand {
+}
+
+p {
+  font-family: "Funnel Display", sans-serif;
+}
+
+p {
+  font-family: "Funnel Display", sans-serif;
+  font-weight: 500;
+}

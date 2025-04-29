@@ -1,0 +1,47 @@
+html {
+  font-size: 15px;
+}
+
+body {
+  background-color: #333333;
+  color: whitesmoke;
+}
+
+.div-container {
+  font-size: 20px;
+  background-color: rgb(46, 46, 46);
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto;
+  justify-content: center;
+  grid-column-gap: 10vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: violet;
+}
+
+a:visited {
+  color: violet;
+}
+
+a:hover {
+  color: blueviolet;
+}
+
+a:active {
+  color: blueviolet;
+}
+
+.plain-table th,
+.plain-table td,
+.plain-table caption {
+  border: 1px solid #333333;
+  font-family: "Courier New", Courier, monospace;
+  border-collapse: separate;
+  padding: 0.5rem;
+}
