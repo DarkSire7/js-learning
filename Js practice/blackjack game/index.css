@@ -1,0 +1,46 @@
+h1 {
+    color: goldenrod;
+    font-family: "Montserrat", sans-serif;
+    font-size: 54;
+    text-align: center;
+
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    font-size: 34;
+}
+
+h3 {
+    color: white;
+    text-align: center;
+    font-size: 24;
+}
+
+body {
+    background-image: url(images/table.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+#message {
+    font-style: italic;
+}
+
+#buttonint {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.button {
+    background-color: rgb(221, 0, 4);
+    color: goldenrod;
+    border-radius: 7px;
+    width: 165px;
+    height: 55px;
+    font-size: 30px;
+    font-weight: bold;
+}
