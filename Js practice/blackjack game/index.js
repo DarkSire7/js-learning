@@ -1,3 +1,8 @@
+let player = {
+    name: "Akif",
+    chips: 36
+}
+
 let sum = 0;
 let isAlive = true;
 let hasBlackJack = false;
@@ -6,10 +11,15 @@ let message = document.getElementById("message");
 
 let cardhtml = document.getElementById("card");
 let sumhtml = document.getElementById("sum");
+let playerhtml = document.getElementById("player-el");
 
 let newbutton = document.getElementById("new");
 
 newbutton.style.opacity = 0;
+
+function playerinfo() {
+    playerhtml.innerHTML = player.name + ": " + player.chips;
+}
 
 function reset() {
     sum = 0;
@@ -20,7 +30,18 @@ function reset() {
 }
 
 function draw() {
-    let carddrawn = Math.ceil(Math.random() * 10) + 1;
+    let carddrawn = Math.floor(Math.random() * 13) + 1;
+    if (carddrawn > 10) {
+        carddrawn = 10;
+    }
+    else if (carddrawn === 1) {
+        if ((sum + 11) > 21) {
+            carddrawn = 1;
+        }
+        else {
+            carddrawn = 11;
+        }
+    }
     sum += carddrawn;
     cardhtml.innerHTML += " " + carddrawn;
     sumhtml.innerHTML = "Sum: " + sum;
@@ -34,11 +55,15 @@ function check() {
         message.innerHTML = "YOU WON";
         newbutton.style.opacity = 0;
         hasBlackJack = true;
+        player.chips += 5;
+        playerinfo();
     }
     else {
         message.innerHTML = "You Lost";
         newbutton.style.opacity = 0;
         isAlive = false;
+        player.chips -= 5;
+        playerinfo();
     }
 }
 
@@ -47,10 +72,11 @@ function start() {
         reset();
     }
     if (sum === 0) {
+        playerinfo();
         draw();
         draw();
         if (sum > 0 && sum < 21) {
-            newbutton.style.opacity = 100;
+            newbutton.style.opacity = 1;
         }
 
         check();
