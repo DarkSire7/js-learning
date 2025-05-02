@@ -27,6 +27,7 @@ function reset() {
     sumhtml.innerHTML = "Sum: ";
     isAlive = true;
     hasBlackJack = false;
+    message.innerHTML = "Want to play a round?";
 }
 
 function draw() {
@@ -35,12 +36,9 @@ function draw() {
         carddrawn = 10;
     }
     else if (carddrawn === 1) {
-        if ((sum + 11) > 21) {
-            carddrawn = 1;
-        }
-        else {
-            carddrawn = 11;
-        }
+        carddrawn = prompt("Ace, Choose 1 or 11");
+        carddrawn = parseInt(carddrawn);
+        console.log(carddrawn)
     }
     sum += carddrawn;
     cardhtml.innerHTML += " " + carddrawn;
@@ -91,3 +89,5 @@ function newcard() {
     check();
 
 }
+
+console.log(isAlive, hasBlackJack)
