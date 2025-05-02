@@ -1,0 +1,26 @@
+#input-field {
+    width: 100%;
+    height: 4vh;
+}
+
+body {
+    padding: 10;
+    font-family: "Montserrat", sans-serif;
+    font-size: large;
+    font-style: italic;
+}
+
+input {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.button {
+    background-color: rgb(8, 153, 8);
+    border: none;
+    margin-top: 3px;
+    color: white;
+    width: 15vh;
+    height: 4vh;
+    font-weight: bold;
+}
