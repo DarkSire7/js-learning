@@ -2,24 +2,31 @@ const savebtn = document.getElementById("save-btn");
 const inputhtml = document.getElementById("input-field");
 let listhtml = document.getElementById("list");
 
-let listitems = "";
+
 
 let myleads = []
-let i = 0;
 
 savebtn.addEventListener("click", function save() {
-    console.log("button clicked")
     myleads.push(inputhtml.value)
     renderleads();
-
+    clear();
 })
 
 
 function renderleads() {
-    for (let i = 0; i < myleads.length; i++) {
-        console.log(myleads[i]);
-        listitems = "<li>" + myleads[i] + "</li>";
-    }
+    let listitems = "";
 
-    listhtml.innerHTML += listitems;
+    for (let i = 0; i < myleads.length; i++) {
+        listitems += `
+        <li>
+            <a href = '${myleads[i]}' target='_blank'> 
+            ${myleads[i]} 
+            </a>
+        </li>`
+    }
+    listhtml.innerHTML = listitems;
+}
+
+function clear() {
+    inputhtml.value = "";
 }
