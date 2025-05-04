@@ -1,4 +1,5 @@
 const savebtn = document.getElementById("save-btn");
+const tabbtn = document.getElementById("tab-btn");
 const clearbtn = document.getElementById("clear-btn");
 
 
@@ -6,6 +7,7 @@ const inputhtml = document.getElementById("input-field");
 let listhtml = document.getElementById("list");
 
 let myleads = []
+
 
 if (localStorage.length != 0) {
     myleads = JSON.parse(localStorage.myLeads)
@@ -20,6 +22,20 @@ savebtn.addEventListener("click", function save() {
 
     renderleads(myleads);
     clear();
+})
+
+tabbtn.addEventListener("click", function tab() {
+
+    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+        myleads.push(tabs[0].url)
+        console.log(tabs)
+        localStorage.setItem("myLeads", JSON.stringify(myleads));
+
+        renderleads(myleads);
+    })
+
+
+
 })
 
 clearbtn.addEventListener("dblclick", function clear() {
