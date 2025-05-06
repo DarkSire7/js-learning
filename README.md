@@ -1,6 +1,6 @@
-My Journey of learning JavaScript by creating projects.
+Learning JavaScript by creating stuff.
 
-Completed Projects present:
+Completed stuff present:
 1. Simple Counter
 2. Simple Calculator
 3. BlackJack game
